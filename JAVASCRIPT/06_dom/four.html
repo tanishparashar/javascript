@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+        
+    </ul>
+</body>
+<script>
+    function addlanguage(langName) {
+        const li = document.createElement('li');
+        li.innerHTML =`${langName}` 
+        document.querySelector('.language').appendChild(li);
+    }
+    addlanguage("python")
+    addlanguage("typescipt")
+
+
+    function addoptil(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+        
+    }
+    addoptil('ruby')
+    const secondlang = document.querySelector('li:nth-child(2 )')
+    const newli = document.createElement('li')
+    newli.textContent = "mojo"
+    secondlang.replaceWith(newli)
+
+    const secondlang1 = document.querySelector('li:first-child')
+    secondlang1.outerHTML='<li>YIYIYI</li>' 
+
+    const  lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
